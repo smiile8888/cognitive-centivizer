@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whack A Mole!</title>
+    <link rel="shortcut icon" href="../assets/logo/centivizer_logo.png">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="js/main.js"></script> -->
+</head>
+<body>
+    <div class="main content">
+        <h1>Whak-A-Mole!</h1>
+        <div class="container">
+            <div class="row" id="instruction">
+                <div class="sign" id="sampleMole"></div>
+                <div class="col-40">
+                    <h3>Instructions</h3>
+                    <span>Hit the mole with the number that matches the one you saw N times ago!<br>
+                    Otherwise avoiding hitting the moles!</span>
+                </div>
+                <div class="sign" id="sampleMoleHat"></div>
+            </div>
+            <div class="row text-center">
+                If you do not how to play, please watch this <a href="demo.html">demo</a>!
+            </div>
+            <form hidden>
+                <div class="row text-center">
+                    <div class="col-25 text-right">
+                        <label for="playerID">PlayerID:</label>
+                    </div>
+                    <div class="left col-50">
+                        <input type="text" id="playerID" placeholder="Enter your playerID...">
+                    </div>
+                </div>
+            </form>
+            <div class="row text-center">
+                <button onclick="goBack()">Back</button>
+                <button onclick="CheckID()">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function goBack() {
+        location.href = "version.html";
+    }
+
+    function CheckID() {
+        location.href = "setup.html";
+        // if (!window.localStorage.playerID) {
+        //     console.error("Please enter your playerID!")
+        //     alert("Go back to the homepage to enter your playerID!");
+        //     location.href = "index.html";
+        // } else {
+        //     location.href = "setup.html";
+        // }
+    }
+</script>
+</html>

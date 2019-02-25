@@ -1,0 +1,43 @@
+body {
+    background-image: url('../assets/media/images/field_portrait.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    overflow: hidden;
+    /* font-family: 'Amatic SC', cursive; */
+    font-size: 22px;
+    color: rgb(43, 31, 17);
+}
+
+.main h1 {
+    font-size: 72px;
+}
+
+.main {
+    padding: 5%;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    float: none;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+@media screen and (max-width: 680px) {
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

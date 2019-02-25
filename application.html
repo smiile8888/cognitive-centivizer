@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Centivizer</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/logo/centivizer_logo.png">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>    
+    <div class="main">
+        <div class="row">
+            <div class="container">
+                <img src="assets/logo/Centivizer_1.png" alt="logo">
+                <h1>Centivizer</h1>
+            </div>
+            
+        </div>
+        <p>
+            Welcome to Centivizer Unit!
+        </p>
+        <div class="row">
+            <div class="col-sm-6">
+                <button onclick="location.href = 'http://35.182.254.43/'">Personal TV</button>
+            </div>
+            <div class="col-sm-6">
+                <button onclick="location.href = 'whack-a-mole/version.html'">Whack-A-Mole Game</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <button onclick="quit()">Back</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function quit() {
+            localStorage.clear();
+            location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

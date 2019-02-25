@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whack A Mole!</title>
+    <link rel="shortcut icon" href="assets/logo/centivizer_logo.png">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="row">
+            <div class="container">
+                <img src="assets/logo/Centivizer_1.png" alt="logo">
+                <h1>Centivizer</h1>
+            </div>
+        </div>
+        <p>
+            Welcome to Centivizer Unit!
+        </p>
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <div class="row text-center">
+                        Please sign up if you do not have an account.
+                    </div>
+                    <label for="newUserID">UserID:</label>
+                    <input type="text" id="newUserID" placeholder="Enter your userID...">
+                </form>
+                <button onclick="signUp()">Sign Up</button>
+            </div>
+            <div class="col-sm-6">
+                <form>
+                    <div class="row text-center">
+                        Or enter your userID if you have one.
+                    </div>
+                    <label for="userID">UserID:</label>
+                    <input type="text" id="userID" placeholder="Enter your userID...">
+                </form>
+                <button onclick="checkID()">Log In</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // function quit() {
+    //     localStorage.clear();
+    //     location.href = "../index.html";
+    // }
+
+    function signUp() {
+        if (document.all.newUserID.value != "") {
+            window.localStorage.userID = document.all.newUserID.value;
+            location.href = 'application.html';
+        } else {
+            alert("Please enter your userID!");
+            document.getElementById("newUserID").focus();
+        }
+    }
+
+    function checkID() {
+        if (document.all.userID.value != "") {
+            window.localStorage.userID = document.all.userID.value;
+            location.href = 'application.html';
+        } else {
+            alert("Please enter your userID!");
+            document.getElementById("userID").focus();
+        }
+    }
+</script>
+</html>

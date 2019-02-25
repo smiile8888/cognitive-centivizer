@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whack A Mole!</title>
+    <link rel="shortcut icon" href="../assets/logo/centivizer_logo.png">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="main content">
+        <h1>Whack-A-Mole !</h1>
+        <div class="container">
+            <div class="row" id="instruction">
+                <div class="sign" id="sampleMole"></div>
+                <div class="col-40">
+                    <span>Choose the level of Whack-A-Mole Game !</span>
+                </div>
+                <div class="sign" id="sampleMoleHat"></div>
+            </div>
+            <div class="row text-center">
+                <button onclick="selectLevel('easy')">Easy</button>
+                <button onclick="selectLevel('medium')">Medium</button>
+                <button onclick="selectLevel('hard')">Hard</button>
+            </div>
+            <div class="row text-center">
+                <button onclick="goHome()">Back</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        if(localStorage.userID) {
+            var userID = localStorage.userID;
+            localStorage.clear();
+            localStorage.userID = userID;
+        } else {
+            location.href = '../index.html';
+        }        
+
+        function goHome() {
+            // localStorage.clear();
+            location.href = "../application.html";
+        }
+        
+        function selectLevel(level) {
+            if (!localStorage.userID){
+                location.href = 'index.html';
+            } else {
+                // localStorage.userID = userID;
+                localStorage.level = level;
+                location.href = level + ".html";
+            }
+        }
+    </script>
+</body>
+</html>

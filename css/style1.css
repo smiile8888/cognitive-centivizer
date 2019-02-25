@@ -1,0 +1,237 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    /* font-family: 'Amatic SC', cursive; */
+    font-size: 22px;
+    color: rgb(43, 31, 17);
+    background-image: url('../assets/media/images/field_portrait.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body h1 {
+    text-align: center;
+    /* font-family: 'Amatic SC', cursive; */
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 1;
+    margin: 0 1rem;
+}
+
+.main {
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.content {
+    padding-top: 10%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.left {
+    float: left;
+}
+
+
+
+.header {
+    /* height: 135px;
+    padding-top: 65px; */
+    display: flex;
+    /* align-items: center; */
+    text-align: center;
+    justify-content: center;
+}
+
+
+/**
+ ** setup.html
+ */
+
+input[type=submit], button {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    float: none;
+    font-weight: bolder;
+}
+
+
+#playerIDForm{
+	align-items: center;	
+	text-align: center;
+}
+
+label {
+	display: inline-block;
+	font-weight: bolder;
+	padding: 12px;
+	align-items: center;
+}
+
+input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=text] {
+	width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button {
+    margin: 15px 0px;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+.container {
+    margin: 0 5%;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-40 {
+	width: 40%;
+	margin-top: 6px;
+}
+
+.col-40 label {
+	float: left;
+	text-align: left;
+}
+
+.col-50 {
+    display: inline-flex;
+    width: 50%;
+}
+
+.blank-input {
+	display: inline-flex;
+	float: right;
+}
+
+.col-75 {
+    display: inline-flex;
+    float: right;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.col-40 span, .col-50 span {
+    text-align: center;
+    padding: 12px;
+}
+
+#timerMin, #timerSec, #nbackNo, #popUpFrequency, #nbackProb {
+    padding-right: 70px;
+}
+
+.row {
+    margin: 6px 0;
+    justify-content: center;
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.margin-130 {
+	margin-left: -130px;
+}
+
+.margin-100 {
+	margin-left: -100px;
+}
+
+.margin-90 {
+	margin-left: -90px;
+}
+
+.margin-80 {
+	margin-left: -80px;
+}
+
+ /**
+  ** demo.html
+  */
+ #demoVid {
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    width: 100%;
+}
+
+ /**
+  ** game.html
+  */
+ #scoreInfo {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+	label {
+		padding: 10px 10px 0px 0;
+    }
+    
+    .text-right {
+        text-align: center;
+    }
+
+    #STboard, #hitboard, #correctMole, #wrongMole {
+		width: 150px;
+		height: 150px;
+	}
+
+	.col-25, .col-40, .col-50, #playerIDForm, #playerIDForm label, input[type=text], input[type=submit], button {
+		width: 80%;
+		margin-top: 0;
+	}
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-50, .col-75, input[type=text], input[type=submit], button {
+        width: 100%;
+        margin-top: 0;
+    }
+}
