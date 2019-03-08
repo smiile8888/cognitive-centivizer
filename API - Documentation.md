@@ -3,29 +3,29 @@
 ## API Endpoints:
 
 ### 0. Main
-- `POST` [/api/login](#POST-/api/login)
-- `POST` [/api/logout](#POST-/api/logout)
+- `POST` [/api/login](#post-apilogin)
+- `POST` [/api/logout](#post-apilogout)
 
 ### 1. Staffs
-- `POST` [/api/staffs/signup](#POST-/api/staffs/signup)
-- `GET` [/api/staffs](#GET-/api/staffs)
-- `GET` [/api/staffs/:staffID](#GET-/api/staffs/:staffID)
-- `PUT` [/api/staffs/:staffID](#PUT-/api/staffs/:staffID)
-- `DELETE` [/api/staffs/:staffID](#DELETE-/api/staffs/:staffID)
+- `POST` [/api/staffs/signup](#post-apistaffssignup)
+- `GET` [/api/staffs](#get-apistaffs)
+- `GET` [/api/staffs/:staffID](#get-apistaffsstaffID)
+- `PUT` [/api/staffs/:staffID](#put-apistaffsstaffID)
+- `DELETE` [/api/staffs/:staffID](#delete-apistaffsstaffID)
 
 ### 2. Residents
-- `POST` [/api/residents/signup](#POST-/api/residents/signup)
-- `GET` [/api/residents](#GET-/api/residents)
-- `GET` [/api/residents/:residentID](#GET-/api/residents/:residentID)
-- `PUT` [/api/residents/:residentID](#PUT-/api/residents/:residentID)
-- `DELETE` [/api/residents/:residentID](#DELETE-/api/residents/:residentID)
+- `POST` [/api/residents/signup](#post-apiresidentssignup)
+- `GET` [/api/residents](#get-apiresidents)
+- `GET` [/api/residents/:residentID](#get-apiresidentsresidentID)
+- `PUT` [/api/residents/:residentID](#put-apiresidentsresidentID)
+- `DELETE` [/api/residents/:residentID](#delete-apiresidentsresidentID)
 
 ### 3. Groups
-- `GET` [/api/groups](#GET-/api/groups)
-- `POST` [/api/groups](#POST-/api/groups)
-- `GET` [/api/groups/:groupID](#GET-/api/groups/:groupID)
-- `PUT` [/api/groups/:groupID](#PUT-/api/groups/:groupID)
-- `DELETE` [/api/groups/:groupID](#DELETE-/api/groups/:groupID)
+- `GET` [/api/groups](#get-apigroups)
+- `POST` [/api/groups](#post-apigroups)
+- `GET` [/api/groups/:groupID](#get-apigroupsgroupID)
+- `PUT` [/api/groups/:groupID](#put-apigroupsgroupID)
+- `DELETE` [/api/groups/:groupID](#delete-apigroupsgroupID)
 ---
 
 ## Main
@@ -45,7 +45,7 @@
 | 401         | Unauthorized   | Password is incorrect |
 | 404         | User not found | User not found        |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `POST` /api/logout
 **Request body:**
@@ -60,7 +60,7 @@
 | :---------: | :-----: | :-------------: |
 | 200         | Success | Success         |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ## Staffs
 ### `POST` /api/staffs/signup
@@ -99,7 +99,7 @@ Get 'ALL' staffs
 | 200 		  | Success 		| Staff object (All staffs) |
 | 500 		  | Internal error 	| Error from server 		|
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `POST` /api/staffs/:staffID
 Get 'SPECIFIC' staff information by sending staffID in URL
@@ -113,14 +113,14 @@ e.g. /api/staffs/lklu402dj03j54
 | 200 		  | Success 		| Staff object 		|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `PUT` /api/staffs/:staffID
 Update 'SPECIFIC' staff information
 
 **Request body:**
 
-Part of [/api/staffs/signup](#POST-/api/staffs/signup) body
+Part of [/api/staffs/signup](#post-apistaffssignup) body
 
 **Response return:**
 
@@ -129,7 +129,7 @@ Part of [/api/staffs/signup](#POST-/api/staffs/signup) body
 | 200 		  | Success 		| Staff object 		|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `DELETE` /api/staffs/:staffID
 Delete 'SPECIFIC' staff
@@ -141,7 +141,7 @@ Delete 'SPECIFIC' staff
 | 200 		  | Success 		| Staff object 		|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ## Residents
 ### `POST` /api/residents/signup
@@ -172,7 +172,7 @@ Signup a new resident
 | 404 		  | Not found 		| Group not found 	|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `GET` /api/residents
 Get 'ALL' residents
@@ -184,7 +184,7 @@ Get 'ALL' residents
 | 200 		  | Success 		| Resident object (All residents) 	|
 | 500 		  | Internal error 	| Error from server 				|
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `GET` /api/residents/:residentID
 Get 'SPECIFIC' resident information by sending residentID in URL
@@ -198,14 +198,14 @@ e.g. /api/residents/lklu402dj03j54
 | 200 		  | Success 		| Resident object 	|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `PUT` /api/residents/:residentID
 Update 'SPECIFIC' resident information
 
 **Request body:**
 
-Part of [/api/residents/signup](#POST-/api/residents/signup) body
+Part of [/api/residents/signup](#post-apiresidentssignup) body
 
 **Response return:**
 
@@ -214,7 +214,7 @@ Part of [/api/residents/signup](#POST-/api/residents/signup) body
 | 200 		  | Success 		| Resident object 	|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `DELETE` /api/residents/:residentID
 Delete 'SPECIFIC' resident
@@ -226,7 +226,7 @@ Delete 'SPECIFIC' resident
 | 200 		  | Success 		| Resident object 	|
 | 500 		  | Internal error 	| Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ## Groups
 ### `GET` /api/groups
@@ -239,7 +239,7 @@ Get 'ALL' groups
 | 200 			| Success 		 | Group object (All groups) |
 | 500 			| Internal error | Error from server 		 |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `POST` /api/groups
 Create a new group
@@ -261,7 +261,7 @@ Create a new group
 | 200 			| Success 		 | Group object 	 |
 | 500 			| Internal error | Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `GET` /api/groups/:groupID
 Get 'SPECIFIC' group information by sending groupID in URL
@@ -275,14 +275,14 @@ e.g. /api/groups/lklu402dj03j54
 | 200 			| Success 		 | Group object 	 |
 | 500 			| Internal error | Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `PUT` /api/groups/:groupID
 Update 'SPECIFIC' group information
 
 **Request body:**
 
-Part of `POST` [/api/groups](#POST-/api/groups) body
+Part of `POST` [/api/groups](#post-apigroups) body
 
 **Response return:**
 
@@ -291,7 +291,7 @@ Part of `POST` [/api/groups](#POST-/api/groups) body
 | 200 			| Success 		 | Group object 	 |
 | 500 			| Internal error | Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
 
 ### `DELETE` /api/groups/:groupID
 Delete 'SPECIFIC' group
@@ -303,4 +303,4 @@ Delete 'SPECIFIC' group
 | 200 			| Success 		 | Group object 	 |
 | 500 			| Internal error | Error from server |
 
-[Go to Top](#API-Endpoints)
+[Go to Top](#api-endpoints)
