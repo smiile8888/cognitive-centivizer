@@ -54,15 +54,15 @@
 - [`POST` /api/users/login](#POST-apiuserslogin)
 
 ### Linked Account
-- [`GET` /api/linked_accounts/](#GET-apilinkedaccounts)
-- [`GET` /api/linked_accounts/:linkedAccountID](#GET-apilinkedaccountslinkedAccountID)
-- [`PUT` /api/linked_accounts/:linkedAccountID](#PUT-apilinkedaccountslinkedAccountID)
-- [`DELETE` /api/linked_accounts/:linkedAccountID](#DELETE-apilinkedaccountslinkedAccountID)
-- [`POST` /api/linked_accounts/signup](#POST-apilinkedaccountssignup)
-- [`POST` /api/linked_accounts/login](#POST-apilinkedaccountslogin)
-- [`POST` /api/linked_accounts/link_user_resident](#POST-apilinkedaccountslinkuserresident)
-- [`POST` /api/linked_accounts/user_accept/:accept](#POST-apilinkedaccountsuseracceptaccept)
-- [`DELETE` /api/linked_accounts/remove/:linkedAccountID](#DELETE-apilinkedaccountsremovelinkedAccountID)
+- [`GET` /api/linked-accounts/](#GET-apilinkedaccounts)
+- [`GET` /api/linked-accounts/:linkedAccountID](#GET-apilinkedaccountslinkedAccountID)
+- [`PUT` /api/linked-accounts/:linkedAccountID](#PUT-apilinkedaccountslinkedAccountID)
+- [`DELETE` /api/linked-accounts/:linkedAccountID](#DELETE-apilinkedaccountslinkedAccountID)
+- [`POST` /api/linked-accounts/signup](#POST-apilinkedaccountssignup)
+- [`POST` /api/linked-accounts/login](#POST-apilinkedaccountslogin)
+- [`POST` /api/linked-accounts/link_user_resident](#POST-apilinkedaccountslinkuserresident)
+- [`POST` /api/linked-accounts/user_accept/:accept](#POST-apilinkedaccountsuseracceptaccept)
+- [`DELETE` /api/linked-accounts/remove/:linkedAccountID](#DELETE-apilinkedaccountsremovelinkedAccountID)
 
 ### Affiliation
 - [`GET` /api/affiliations](#GET-apiaffiliations)
@@ -808,7 +808,7 @@ Login to User account
 ---
 
 ## Linked Account Routes
-### `GET` /api/linked_accounts/
+### `GET` /api/linked-accounts/
 Get all accounts
 
 **Response return:**
@@ -822,7 +822,7 @@ Get all accounts
 
 [Go to Top](#Linked-Account)
 
-### `GET` /api/linked_accounts/:linkedAccountID
+### `GET` /api/linked-accounts/:linkedAccountID
 Get specific account
 
 **Response return:**
@@ -836,7 +836,7 @@ Get specific account
 
 [Go to Top](#Linked-Account)
 
-### `PUT` /api/linked_accounts/:linkedAccountID
+### `PUT` /api/linked-accounts/:linkedAccountID
 Edit some properties of an account
 
 **Request body:**
@@ -864,7 +864,7 @@ Edit some properties of an account
 
 [Go to Top](#Linked-Account)
 
-### `DELETE` /api/linked_accounts/:linkedAccountID
+### `DELETE` /api/linked-accounts/:linkedAccountID
 Delete an user account
 
 **Response return:**
@@ -879,7 +879,7 @@ Delete an user account
 [Go to Top](#Linked-Account)
 
 
-### `POST` /api/linked_accounts/signup
+### `POST` /api/linked-accounts/signup
 Create a new  account 
 
 **Request body:**
@@ -909,7 +909,7 @@ Create a new  account
 [Go to Top](#Linked-Account)
 
 
-### `POST` /api/linked_accounts/login
+### `POST` /api/linked-accounts/login
 Login to account 
 
 **Request body:**
@@ -930,7 +930,7 @@ Login to account
 [Go to Top](#Linked-Account)
 
 
-### `POST` /api/linked_accounts/link_user_resident
+### `POST` /api/linked-accounts/link_user_resident
 Link a linkedAccount to a resident or a user.
 
 For resident, must be an admin of an affiliation that contains both resident and linkedAccount, or staff within same group as the resident and same affiliation as the linkedAccount
@@ -957,8 +957,8 @@ For user, must use this route as a linked account to send a request to the user 
 [Go to Top](#Linked-Account)
 
 
-### `POST` /api/linked_accounts/user_accept/:accept
-For user account to accept a request made by linked account from route: [/api/linked_accounts/link_user_resident](#POST-apilinkedaccountslinkuserresident)
+### `POST` /api/linked-accounts/user_accept/:accept
+For user account to accept a request made by linked account from route: [/api/linked-accounts/link_user_resident](#POST-apilinkedaccountslinkuserresident)
 
 **Request body:**
 
@@ -978,7 +978,7 @@ For user account to accept a request made by linked account from route: [/api/li
 [Go to Top](#Linked-Account)
 
 
-### `DELETE` /api/linked_accounts/remove/:linkedAccountID
+### `DELETE` /api/linked-accounts/remove/:linkedAccountID
 Remove a linked account from a resident or a user 
 
 **Response return:**
