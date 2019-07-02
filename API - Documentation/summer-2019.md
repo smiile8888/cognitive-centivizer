@@ -87,13 +87,15 @@
 - [`DELETE` /api/groups/:groupID/staffs/:staffID](#DELETE-apigroupsgroupIDstaffsstaffID)
 
 ### Application
+
+### Session
 1. Experiential Centivizer
-   - [`GET` /api/applications/experiential-centivizer/](#GET-apiapplicationsexperiential-centivizer)
-   - [`POST` /api/applications/experiential-centivizer/](#POST-apiapplicationsexperiential-centivizer)
-   - [`GET` /api/applications/experiential-centivizer/users/:userID](#GET-apiapplicationsexperiential-centivizerusersuserID)
-   - [`GET` /api/applications/experiential-centivizer/residents/:residentID](#GET-apiapplicationsexperiential-centivizerresidentsresidentID)
-   - [`GET` /api/applications/experiential-centivizer/groups/:groupID](#GET-apiapplicationsexperiential-centivizergroupsgroupID)
-   - [`GET` /api/applications/experiential-centivizer/affiliations/:affiliationID](#GET-apiapplicationsexperiential-centivizeraffiliationsaffiliationID)
+   - [`GET` /api/experiential-centivizer/](#GET-apiexperiential-centivizer)
+   - [`POST` /api/experiential-centivizer/](#POST-apiexperiential-centivizer)
+   - [`GET` /api/experiential-centivizer/users/:userID](#GET-apiexperiential-centivizerusersuserID)
+   - [`GET` /api/experiential-centivizer/residents/:residentID](#GET-apiexperiential-centivizerresidentsresidentID)
+   - [`GET` /api/experiential-centivizer/groups/:groupID](#GET-apiexperiential-centivizergroupsgroupID)
+   - [`GET` /api/experiential-centivizer/affiliations/:affiliationID](#GET-apiexperiential-centivizeraffiliationsaffiliationID)
   
 2. Cognitive Centivizer
 3. Physical Exercise
@@ -115,7 +117,7 @@ Get all system admins in the system
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#System-Admin)
 
 ### `DELETE` /api/systems/:systemID
 Delete the system admin ID
@@ -129,7 +131,7 @@ Delete the system admin ID
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#System-Admin)
 
 ### `POST` /api/systems/signup
 Create new system admin account
@@ -151,13 +153,13 @@ Create new system admin account
 | 401 		  | Authorization Error 	| Unauthorized message if not include superPass |
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#System-Admin)
 
 ### `POST` /api/systems/login
 
 **Request body:**
 
-| Parameter     | Status |
+| Parameter     | Status | Description   | Required |
 | :---------: 	| :----: | :-----------: | :------: |
 | username 		| String |               | **Yes**  |
 | password 		| String |               | **Yes**  |
@@ -171,7 +173,7 @@ Create new system admin account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#System-Admin)
 
 
 ---
@@ -191,7 +193,7 @@ Get all researchers
 | 500 		  | Internal error 	| Error Message from server |
 | 401 		  | Authorization Error 	| Unauthorized message if not system|
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 ### `GET` /api/researchers/:researcherID
 Get specific researcher
@@ -205,7 +207,7 @@ Get specific researcher
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 
 ### `PUT` /api/researchers/:researcherID
@@ -227,7 +229,7 @@ Edit some properties of a researcher account
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 
 ### `DELETE` /api/researchers/:researcherID
@@ -242,7 +244,7 @@ Delete a researcher account
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 ### `POST` /api/researchers/signup
 Create a new researcher account 
@@ -267,15 +269,16 @@ Create a new researcher account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 ### `POST` /api/researchers/login
 
 **Request body:**
 
-| :---------: 	| :----: 		| :-----------:| :------: |
-| username 		| String 		| Last name| **Yes**       |
-| password 		| String 		| Last name| **Yes**       |
+| Parameter 	| Type 			| Description       | Required |
+| :---------: 	| :----: 		| :-----------:     | :------: |
+| username 		| String 		|                   | **Yes**       |
+| password 		| String 		|                   | **Yes**       |
 
 **Response return:**
 
@@ -286,7 +289,7 @@ Create a new researcher account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 
 ### `GET` /api/researchers/resident_data/peddler
@@ -301,7 +304,7 @@ Get CSV for all session data of each game
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Researcher)
 
 ---
 
@@ -318,12 +321,13 @@ Get all admins
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Admin)
 
 ### `GET` /api/admins/:adminID
 Get specific admin
 
 **Response return:**
+
 | Status code | Status 			| Response body 	|
 | :---------: | :------: 		| :-------------: 	|
 | 200 		  | Success 		| JSON {admin:admin} 	|
@@ -331,7 +335,7 @@ Get specific admin
 | 500 		  | Internal error 	| Error Message from server |
 | 401 		  | Authorization Error 	| Unauthorized message if not system or the admin being queried|
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Admin)
 
 
 ### `PUT` /api/admins/:adminID
@@ -361,7 +365,7 @@ Edit some properties of an admin account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Admin)
 
 
 ### `DELETE` /api/admins/:adminID
@@ -376,12 +380,13 @@ Delete an admin account
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Admin)
 
 ### `POST` /api/admins/signup
 Create a new admin account 
 
 **Request body:**
+
 | Parameter 	| Type 			| Description   | Required  |
 | :---------: 	| :----: 		| :-----------: | :------:  |
 | first_name 	| String 		| First name	| Yes       |
@@ -397,12 +402,13 @@ Create a new admin account
 | birth_date 	| String 		| birth day     | No        |
 
 **Response return:**
+
 | Status code | Status 			| Response body 	|
 | :---------: | :------: 		| :-------------: 	|
 | 200 		  | Success 		| JSON {message: 'Admin created successfully', id: admin._id, username: admin.username} 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Admin)
 
 
 ### `POST` /api/admins/login
@@ -424,7 +430,7 @@ Login to admin account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Admin)
 
 
 ## Staff Routes
@@ -439,6 +445,8 @@ Get all staffs
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
+[Go to Top](#Staff)
+
 ### `GET` /api/staffs/:staffID
 Get specific staff
 
@@ -452,7 +460,7 @@ Get specific staff
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Staff)
 
 
 ### `PUT` /api/staffs/:staffID
@@ -480,7 +488,7 @@ Edit some properties of an staff account
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Staff)
 
 
 ### `DELETE` /api/staffs/:staffID
@@ -495,7 +503,7 @@ Delete an staff account
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Staff)
 
 
 ### `POST` /api/staffs/signup
@@ -527,7 +535,7 @@ Create a new staff account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Staff)
 
 
 ### `POST` /api/staffs/login
@@ -548,7 +556,7 @@ Login to staff account
 | 401 		  | Authorization Error 	| Unauthorized message if password doesnt match username|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Staff)
 
 ---
 
@@ -566,7 +574,7 @@ Get all residents
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Resident)
 
 ### `GET` /api/residents/:residentID
 Get specific resident
@@ -580,7 +588,7 @@ Get specific resident
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Resident)
 
 
 ### `PUT` /api/residents/:residentID
@@ -608,7 +616,7 @@ Edit some properties of an resident account
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Resident)
 
 ### `DELETE` /api/residents/:residentID
 Delete a resident account
@@ -622,7 +630,7 @@ Delete a resident account
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Resident)
 
 ### `POST` /api/residents/signup
 Create a new resident account 
@@ -645,7 +653,6 @@ Create a new resident account
 | group_ids 	| String Array 	| Group Ids that resident is to be added into| No       |
 
 
-
 **Response return:**
 
 | Status code | Status 			| Response body 	|
@@ -655,7 +662,7 @@ Create a new resident account
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Resident)
 
 ### `POST` /api/residents/login
 Login to resident account 
@@ -675,7 +682,7 @@ Login to resident account
 | 401 		  | Authorization Error 	| Unauthorized message if password doesnt match username|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Resident)
 
 ---
 
@@ -692,7 +699,7 @@ Get all users
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#User)
 
 ### `GET` /api/users/:userID
 Get specific user
@@ -706,7 +713,7 @@ Get specific user
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#User)
 
 ### `PUT` /api/users/:userID
 Edit some properties of an user account
@@ -726,14 +733,13 @@ Edit some properties of an user account
 
 **Response return:**
 
+| Status code | Status 			| Response body 	|
 | 200 		  | Success 		| JSON {user:user} 	|
 | 401 		  | Authorization Error 	| Unauthorized message if not system,or user being queried|
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
-
----
+[Go to Top](#User)
 
 ### `DELETE` /api/users/:userID
 Delete an user account
@@ -747,7 +753,7 @@ Delete an user account
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#User)
 
 
 ### `POST` /api/users/signup
@@ -777,7 +783,7 @@ Create a new user account
 | 200 		  | Success 		| JSON {user:user}|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#User)
 
 ### `POST` /api/users/login
 Login to User account 
@@ -797,7 +803,7 @@ Login to User account
 | 401 		  | Authorization Error 	| Unauthorized message if password doesnt match username|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#User)
 
 ---
 
@@ -806,6 +812,7 @@ Login to User account
 Get all accounts
 
 **Response return:**
+
 | Status code | Status 			| Response body 	|
 | :---------: | :------: 		| :-------------: 	|
 | 200 		  | Success 		| JSON {account:account} 	|
@@ -813,7 +820,7 @@ Get all accounts
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 ### `GET` /api/linked_accounts/:linkedAccountID
 Get specific account
@@ -827,7 +834,7 @@ Get specific account
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 ### `PUT` /api/linked_accounts/:linkedAccountID
 Edit some properties of an account
@@ -855,7 +862,7 @@ Edit some properties of an account
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 ### `DELETE` /api/linked_accounts/:linkedAccountID
 Delete an user account
@@ -869,7 +876,7 @@ Delete an user account
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 
 ### `POST` /api/linked_accounts/signup
@@ -893,12 +900,13 @@ Create a new  account
 |affiliation (do not put in)|String|if logged into, admin, will place new account under admin's affiliation, else if its a unauthorized account, then will have null as affiliation|No|
 
 **Response return:**
+
 | Status code | Status 			| Response body 	|
 | :---------: | :------: 		| :-------------: 	|
 | 200 		  | Success 		| JSON {user:user}|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 
 ### `POST` /api/linked_accounts/login
@@ -912,13 +920,14 @@ Login to account
 | password 		| String 		|              | **Yes**  |
 
 **Response return:**
+
 | Status code | Status 			| Response body 	|
 | :---------: | :------: 		| :-------------: 	|
 | 200 		  | Success 		| JSON {token: token,expiresIn: 3600,userId: user._id}} 	|
 | 401 		  | Authorization Error 	| Unauthorized message if password doesnt match username|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 
 ### `POST` /api/linked_accounts/link_user_resident
@@ -945,7 +954,7 @@ For user, must use this route as a linked account to send a request to the user 
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server, or if these accounts are already linked, You have already sent a request to this user|
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 
 ### `POST` /api/linked_accounts/user_accept/:accept
@@ -966,7 +975,7 @@ For user account to accept a request made by linked account from route: [/api/li
 | 404 		  | Not found 		| Unable to fetch asset, This user has not sent you a request 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 
 ### `DELETE` /api/linked_accounts/remove/:linkedAccountID
@@ -980,7 +989,7 @@ Remove a linked account from a resident or a user
 | 401 		  | Authorization Error 	| Unauthorized message if not a resident or a user|
 | 500 		  | Internal error 	| Error Message from server,Unable to delink these two accounts |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Linked-Account)
 
 ---
 
@@ -996,7 +1005,7 @@ Get all affiliations in the system
 | 401 		  | Authorization Error 	| Unauthorized message if not system |
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `POST` /api/affiliations
 Create new affiliation
@@ -1023,7 +1032,7 @@ Create new affiliation
 | 401 		  | Authorization Error 	| Unauthorized message if not system or admin |
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `GET` /api/affiliations/:affiliation_id
 Get the info of specific affiliation
@@ -1037,7 +1046,7 @@ Get the info of specific affiliation
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `PUT` /api/affiliations/:affiliation_id
 Update info of specific affiliation
@@ -1055,7 +1064,7 @@ Same as the [`POST` /api/affiliations/](#post-apiaffiliations)
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `DELETE` /api/affiliations/:affiliation_id
 Delete specific affiliation
@@ -1069,7 +1078,7 @@ Delete specific affiliation
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `GET` /api/affiliations/:affilition_id/admin
 Get the admin of specific affiliation
@@ -1083,7 +1092,7 @@ Get the admin of specific affiliation
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `GET` /api/affiliations/:affiliation_id/residents
 Get all staffs in specific affiliation
@@ -1097,7 +1106,7 @@ Get all staffs in specific affiliation
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `GET` /api/affiliations/:affiliation_id/staffs
 Get all staffs in this affiliation
@@ -1111,7 +1120,7 @@ Get all staffs in this affiliation
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ### `GET` /api/affiliations/:affiliation_id/groups
 Get all groups in this affiliation
@@ -1125,7 +1134,7 @@ Get all groups in this affiliation
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Affiliation)
 
 ---
 
@@ -1142,7 +1151,7 @@ Get all users
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 ### `POST` /api/groups/
 Create a new group
@@ -1167,7 +1176,7 @@ Create a new group
 | 400		  | Authorization Error 	| Missing group_name |
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 ### `GET` /api/groups/:groupID
 Get specific group
@@ -1181,7 +1190,7 @@ Get specific group
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 
 ### `PUT` /api/groups/:groupID
@@ -1203,7 +1212,7 @@ Edit some properties of a group
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 
 ### `DELETE` /api/groups/:groupID
@@ -1218,7 +1227,7 @@ Delete a group
 | 404 		  | Not found 		| Unable to delete asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 ### `POST` /api/groups/:groupID/residents/:residentID
 Add a residentID to a groupID
@@ -1232,7 +1241,7 @@ Add a residentID to a groupID
 | 404 		  | Not found 		| Unable to fetch asset, This resident is already a part of this group 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 ### `DELETE` /api/groups/:groupID/residents/:residentID
 Remove a residentID from a groupID
@@ -1246,7 +1255,7 @@ Remove a residentID from a groupID
 | 404 		  | Not found 		| Unable to fetch asset, This resident is not apart of this group|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 ### `POST` /api/groups/:groupID/staffs/:staffID
 Add a staffID to a groupID
@@ -1260,7 +1269,7 @@ Add a staffID to a groupID
 | 404 		  | Not found 		| Unable to fetch asset, This staff is already a part of this group 	|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
 
 ### `DELETE` /api/groups/:groupID/staffs/:staffID
 Remove a staffID from a groupID
@@ -1274,11 +1283,13 @@ Remove a staffID from a groupID
 | 404 		  | Not found 		| Unable to fetch asset, This staff is not apart of this group|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Group)
+
+---
 
 ## Session Routes
 ## Experiential-centivizer
-### `GET` /api/applications/experiential-centivizer/
+### `GET` /api/experiential-centivizer/
 Get all sessions in database
 
 **Response return:**
@@ -1291,9 +1302,9 @@ Get all sessions in database
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Session)
 
-### `POST` /api/applications/experiential-centivizer/
+### `POST` /api/experiential-centivizer/
 Post a session
 
 **Request body:**
@@ -1322,11 +1333,10 @@ Post a session
 | 404 		  | Not found 		| Unable to fetch asset 	|
 | 500 		  | Internal error 	| Error Message from server |
 
+[Go to Top](#Session)
 
-[Go to Top](#api-endpoints)
 
-
-### `GET` /api/applications/experiential-centivizer/users/:userID
+### `GET` /api/experiential-centivizer/users/:userID
 Get all sessions from a user
 
 **Response return:**
@@ -1338,9 +1348,9 @@ Get all sessions from a user
 | 404 		  | Not found 		| Unable to fetch asset|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Session)
 
-### `GET` /api/applications/experiential-centivizer/residents/:residentID
+### `GET` /api/experiential-centivizer/residents/:residentID
 Get all sessions from a resident
 
 **Response return:**
@@ -1352,9 +1362,9 @@ Get all sessions from a resident
 | 404 		  | Not found 		| Unable to fetch asset|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Session)
 
-### `GET` /api/applications/experiential-centivizer/groups/:groupID
+### `GET` /api/experiential-centivizer/groups/:groupID
 Get all sessions from residents within a group
 
 **Response return:**
@@ -1366,9 +1376,9 @@ Get all sessions from residents within a group
 | 404 		  | Not found 		| Unable to fetch asset|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Session)
 
-### `GET` /api/applications/experiential-centivizer/affiliations/:affiliationID
+### `GET` /api/experiential-centivizer/affiliations/:affiliationID
 Get all sessions from residents within an affiliation
 
 **Response return:**
@@ -1380,9 +1390,9 @@ Get all sessions from residents within an affiliation
 | 404 		  | Not found 		| Unable to fetch asset|
 | 500 		  | Internal error 	| Error Message from server |
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Session)
 
-### `GET` /api/applications/experiential-centivizer/:sessionID
+### `GET` /api/experiential-centivizer/:sessionID
 Get a specific session
 
 **Response return:**
@@ -1395,6 +1405,6 @@ Get a specific session
 | 500 		  | Internal error 	| Error Message from server |
 
 
-[Go to Top](#api-endpoints)
+[Go to Top](#Session)
 
 ---
