@@ -60,8 +60,8 @@
 - [`DELETE` /api/linked-accounts/:linkedAccountID](#DELETE-apilinkedaccountslinkedAccountID)
 - [`POST` /api/linked-accounts/signup](#POST-apilinkedaccountssignup)
 - [`POST` /api/linked-accounts/login](#POST-apilinkedaccountslogin)
-- [`POST` /api/linked-accounts/link_user_resident](#POST-apilinkedaccountslinkuserresident)
-- [`POST` /api/linked-accounts/user_accept/:accept](#POST-apilinkedaccountsuseracceptaccept)
+- [`POST` /api/linked-accounts/link-user-resident](#POST-apilinkedaccountslinkuserresident)
+- [`POST` /api/linked-accounts/user-accept/:accept](#POST-apilinkedaccountsuseracceptaccept)
 - [`DELETE` /api/linked-accounts/remove/:linkedAccountID](#DELETE-apilinkedaccountsremovelinkedAccountID)
 
 ### Affiliation
@@ -930,7 +930,7 @@ Login to account
 [Go to Top](#Linked-Account)
 
 
-### `POST` /api/linked-accounts/link_user_resident
+### `POST` /api/linked-accounts/link-user-resident
 Link a linkedAccount to a resident or a user.
 
 For resident, must be an admin of an affiliation that contains both resident and linkedAccount, or staff within same group as the resident and same affiliation as the linkedAccount
@@ -957,14 +957,14 @@ For user, must use this route as a linked account to send a request to the user 
 [Go to Top](#Linked-Account)
 
 
-### `POST` /api/linked-accounts/user_accept/:accept
+### `POST` /api/linked-accounts/user-accept/:accept
 For user account to accept a request made by linked account from route: [/api/linked-accounts/link_user_resident](#POST-apilinkedaccountslinkuserresident)
 
 **Request body:**
 
 | Parameter 	| Type 	 | Description  | Required |
 | :---------: 	| :----: | :-----------:| :------: |
-| accept 		| String | Should be either "accept", anything else counts as a decline to the request | Yes       |
+| accept 		| String | Should be either **"accept" or "reject"**, anything else counts as a decline to the request | Yes       |
 
 **Response return:**
 
